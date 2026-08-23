@@ -167,8 +167,9 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className={`section ${styles.testimonials}`}>
+      {/* TESTIMONIALS */} 
+      {/* This section is for customer reviews */}
+      {/* <section className={`section ${styles.testimonials}`}>
         <div className="container">
           <h2 className="section-title">What Our Customers Say</h2>
           <div className={styles.testimonialGrid}>
@@ -185,7 +186,7 @@ export default async function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className={styles.ctaSection}>
