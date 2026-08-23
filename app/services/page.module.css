@@ -1,0 +1,16 @@
+.header {
+  background: var(--color-navy);
+  padding: 48px 0;
+}
+
+.title {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #cbd5e1;
+  max-width: 620px;
+  font-size: 15px;
+}

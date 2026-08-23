@@ -1,0 +1,149 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--color-accent);
+  color: var(--color-navy);
+}
+
+.logoAccent {
+  color: var(--color-accent-dark);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-text);
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.navLink:hover {
+  color: var(--color-accent-dark);
+}
+
+.navLinkActive {
+  color: var(--color-navy);
+  border-bottom-color: var(--color-accent);
+}
+
+.mobileCart {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cartBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy);
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: var(--color-accent);
+  color: var(--color-navy);
+  font-size: 11px;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-navy);
+}
+
+@media (max-width: 860px) {
+  .nav {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 20px 20px;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navLink {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobileCart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 0;
+    font-weight: 700;
+  }
+
+  .ctaDesktop {
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+}

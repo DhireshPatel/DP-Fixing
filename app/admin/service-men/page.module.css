@@ -1,0 +1,179 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.tableCard {
+  padding: 0;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  min-width: 950px;
+}
+
+.table th {
+  text-align: left;
+  padding: 14px 16px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.emptyCell {
+  text-align: center;
+  padding: 30px;
+  color: var(--color-text-muted);
+}
+
+.rowActions {
+  display: flex;
+  gap: 6px;
+}
+
+.activeTag {
+  color: var(--color-success);
+  font-weight: 700;
+  font-size: 12.5px;
+}
+
+.inactiveTag {
+  color: var(--color-text-muted);
+  font-weight: 700;
+  font-size: 12.5px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1000;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.modal {
+  position: relative;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+}
+
+.modalTitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.locationButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.orDivider {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin: 8px 0;
+  text-align: center;
+}
+
+.locationConfirm {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+.checkboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+}
+
+.dayRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dayBtn {
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  background: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dayBtnActive {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .row2 { grid-template-columns: 1fr; }
+  .checkboxGrid { grid-template-columns: 1fr; }
+}

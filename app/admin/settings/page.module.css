@@ -1,0 +1,98 @@
+.pageTitle {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.section {
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.mutedText {
+  color: var(--color-text-muted);
+  font-size: 13.5px;
+  margin-bottom: 14px;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.toggleRow {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.slotRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.areaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+}
+
+.areaMeta {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.addAreaBox {
+  border-top: 1px dashed var(--color-border);
+  padding-top: 16px;
+  margin-top: 6px;
+}
+
+.locationButtons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.orDivider {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin: 8px 0;
+  text-align: center;
+}
+
+.locationConfirm {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--color-success);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .row2 { grid-template-columns: 1fr; }
+}

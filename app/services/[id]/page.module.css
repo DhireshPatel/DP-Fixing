@@ -1,0 +1,153 @@
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+.backLink:hover {
+  color: var(--color-navy);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.name {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.description {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.block {
+  margin-bottom: 22px;
+}
+
+.blockTitle {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.checkIcon {
+  color: var(--color-success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.infoIcon {
+  color: var(--color-accent-dark);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.addSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.qtyControls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+
+.qtyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: none;
+  background: var(--color-bg);
+  color: var(--color-navy);
+}
+
+.qtyBtn:hover {
+  background: var(--color-accent);
+}
+
+.qty {
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}
+
+.addBtn {
+  flex: 1;
+  min-width: 200px;
+}
+
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; }
+}

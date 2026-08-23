@@ -1,0 +1,52 @@
+.title {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.formCard {
+  padding: 26px;
+}
+
+.summaryCard {
+  padding: 22px;
+  position: sticky;
+  top: 90px;
+}
+
+.summaryTitle {
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  padding: 6px 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 10px 0;
+}
+
+.totalRow {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .summaryCard { position: static; }
+}
