@@ -3,6 +3,9 @@ import { getSupabaseAdmin, TABLES } from "@/lib/supabase";
 import { mapService, unmapServiceInput } from "@/lib/mappers";
 import { getAdminFromRequest } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET(request) {
   try {
     const supabase = getSupabaseAdmin();
@@ -11,7 +14,10 @@ export async function GET(request) {
 
     const admin = getAdminFromRequest(request);
 
-    let query = supabase.from(TABLES.SERVICES).select("*").order("order", { ascending: true });
+    let query = supabase
+      .from(TABLES.SERVICES)
+      .select("*")
+      .order("order", { ascending: true });
     if (!(includeInactive && admin)) {
       query = query.eq("active", true);
     }
@@ -24,7 +30,7 @@ export async function GET(request) {
     console.error("GET /api/services error:", err);
     return NextResponse.json(
       { error: "Unable to load services right now." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -39,11 +45,19 @@ export async function POST(request) {
     const supabase = getSupabaseAdmin();
     const body = await request.json();
 
-    const { name, description, shortDescription, image, price, duration } = body;
-    if (!name || !description || !shortDescription || !image || price == null || !duration) {
+    const { name, description, shortDescription, image, price, duration } =
+      body;
+    if (
+      !name ||
+      !description ||
+      !shortDescription ||
+      !image ||
+      price == null ||
+      !duration
+    ) {
       return NextResponse.json(
         { error: "Missing required service fields." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -77,7 +91,7 @@ export async function POST(request) {
     console.error("POST /api/services error:", err);
     return NextResponse.json(
       { error: "Unable to create service." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
