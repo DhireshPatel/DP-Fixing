@@ -112,7 +112,7 @@ export default function BookingForm({ onSubmit, submitting, timeSlots }) {
           name="customerName"
           value={form.customerName}
           onChange={handleChange}
-          placeholder="e.g. Amit Patel"
+          placeholder="e.g. Dhiresh Patel"
         />
         {formErrors.customerName && <div className="form-error">{formErrors.customerName}</div>}
       </div>
