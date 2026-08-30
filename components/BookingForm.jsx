@@ -113,6 +113,7 @@ export default function BookingForm({ onSubmit, submitting, timeSlots }) {
           value={form.customerName}
           onChange={handleChange}
           placeholder="e.g. Dhiresh Patel"
+          required
         />
         {formErrors.customerName && <div className="form-error">{formErrors.customerName}</div>}
       </div>
@@ -125,6 +126,7 @@ export default function BookingForm({ onSubmit, submitting, timeSlots }) {
           value={form.phone}
           onChange={handleChange}
           placeholder="e.g. 9876543210"
+          required
         />
         {formErrors.phone && <div className="form-error">{formErrors.phone}</div>}
       </div>
@@ -137,6 +139,7 @@ export default function BookingForm({ onSubmit, submitting, timeSlots }) {
           value={form.address}
           onChange={handleChange}
           placeholder="House no, street, area..."
+          required
         />
         {formErrors.address && <div className="form-error">{formErrors.address}</div>}
       </div>
@@ -193,6 +196,7 @@ export default function BookingForm({ onSubmit, submitting, timeSlots }) {
             name="preferredTimeSlot"
             value={form.preferredTimeSlot}
             onChange={handleChange}
+            required
           >
             <option value="">Select a time slot</option>
             {slots.map((slot) => (
