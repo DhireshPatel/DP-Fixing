@@ -4,10 +4,10 @@ import { ShieldCheck, Users, Clock, Award } from "lucide-react";
 import styles from "./page.module.css";
 
 const STATS = [
-  { icon: Users, label: "Happy Customers", value: "5,000+" },
+  // { icon: Users, label: "Happy Customers", value: "5,000+" },
   { icon: ShieldCheck, label: "Verified Electricians", value: "50+" },
   { icon: Clock, label: "Avg. Response Time", value: "60 min" },
-  { icon: Award, label: "Years of Service", value: "6+" },
+  // { icon: Award, label: "Years of Service", value: "6+" },
 ];
 
 export const metadata = { title: "About Us | DP Fixing" };

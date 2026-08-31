@@ -76,7 +76,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className={`card ${styles.formCard}`}>
+          {/* <div className={`card ${styles.formCard}`}>
             {sent ? (
               <div className="success-banner">
                 Thanks for reaching out! We'll get back to you shortly.
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 </button>
               </form>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

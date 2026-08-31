@@ -77,7 +77,7 @@ export default async function HomePage() {
             </p>
             <div className={styles.heroActions}>
               <Link href="/services" className="btn btn-primary">Explore Services</Link>
-              <Link href="/services" className="btn btn-secondary">View Services</Link>
+              <Link href="/cart" className="btn btn-secondary">Book Services</Link>
             </div>
           </div>
 
