@@ -76,14 +76,14 @@ export default async function HomePage() {
               maintenance.
             </p>
             <div className={styles.heroActions}>
-              <Link href="/services" className="btn btn-primary">Book a Service</Link>
+              <Link href="/services" className="btn btn-primary">Explore Services</Link>
               <Link href="/services" className="btn btn-secondary">View Services</Link>
             </div>
           </div>
 
           <div className={styles.heroImageWrap}>
             <Image
-              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=80"
+              src="https://i.pinimg.com/736x/23/28/59/2328594698708a9b4eae6bc07de25d51.jpg"
               alt="Professional electrician at work"
               fill
               priority
@@ -195,7 +195,7 @@ export default async function HomePage() {
           <p className={styles.ctaSubtitle}>
             Get a verified electrician at your doorstep, today.
           </p>
-          <Link href="/services" className="btn btn-primary">Book a Service Now</Link>
+          <Link href="/services" className="btn btn-primary">Explore Services Now</Link>
         </div>
       </section>
     </div>

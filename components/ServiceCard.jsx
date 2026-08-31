@@ -6,16 +6,29 @@ import { Clock, Plus, Check } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import styles from "./ServiceCard.module.css";
+import { useToast } from "@/context/ToastContext";
+import { useRouter } from "next/navigation";
 
 export default function ServiceCard({ service }) {
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
+  const { showToast } = useToast();
+  const router = useRouter();
 
   function handleAdd(e) {
     e.preventDefault();
     e.stopPropagation();
+
     addItem(service, 1);
+
     setAdded(true);
+
+    showToast(
+      `${service.name} added to cart`,
+      "Go to Cart to book your service",
+      () => router.push("/cart"),
+    );
+
     setTimeout(() => setAdded(false), 1500);
   }
 
@@ -29,7 +42,9 @@ export default function ServiceCard({ service }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
           className={styles.image}
         />
-        {service.popular && <span className={styles.popularBadge}>Popular</span>}
+        {service.popular && (
+          <span className={styles.popularBadge}>Popular</span>
+        )}
       </div>
 
       <div className={styles.body}>

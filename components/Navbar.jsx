@@ -56,7 +56,7 @@ export default function Navbar() {
             {totalItems > 0 && <span className={styles.cartBadge}>{totalItems}</span>}
           </Link>
           <Link href="/services" className={`btn btn-primary ${styles.ctaDesktop}`}>
-            Book a Service
+            Explore Services
           </Link>
           <button
             className={styles.menuBtn}

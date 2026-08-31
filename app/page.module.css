@@ -52,6 +52,7 @@
 
 .heroImage {
   object-fit: cover;
+  object-position: top;
 }
 
 .availability {
