@@ -28,7 +28,7 @@ export default function AboutPage() {
         <div className={styles.grid}>
           <div className={styles.imageWrap}>
             <Image
-              src="/images/DhireshImg.jpeg"
+              src="/images/OwnerDP-Fixing.jpeg"
               alt="DP Fixing electrician team"
               fill
               sizes="(max-width: 860px) 100vw, 500px"
