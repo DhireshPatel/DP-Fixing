@@ -339,7 +339,7 @@ export default function BookingForm({ onSubmit, submitting, timeSlots }) {
           name="customerName"
           value={form.customerName}
           onChange={handleChange}
-          placeholder="e.g. Dhiresh Patel"
+          placeholder="Enter Your Full Name"
           required
         />
         {formErrors.customerName && (
@@ -354,7 +354,7 @@ export default function BookingForm({ onSubmit, submitting, timeSlots }) {
           name="phone"
           value={form.phone}
           onChange={handleChange}
-          placeholder="e.g. 9876543210"
+          placeholder="Enter Your Contact Number"
           required
         />
         {formErrors.phone && (
