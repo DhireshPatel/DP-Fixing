@@ -292,6 +292,35 @@ export default function AdminServicesPage() {
                   />
                 </div>
               </div>
+
+              <div className="form-group">
+                <label className="form-label">Category</label>
+
+                <input
+                  className="form-input"
+                  name="category"
+                  value={form.category}
+                  onChange={handleChange}
+                  list="service-categories"
+                  placeholder="e.g. Fan Services"
+                  required
+                />
+
+                <datalist id="service-categories">
+                  <option value="General" />
+
+                  {[
+                    ...new Set(
+                      services
+                        .map((service) => service.category?.trim())
+                        .filter(Boolean),
+                    ),
+                  ].map((category) => (
+                    <option key={category} value={category} />
+                  ))}
+                </datalist>
+              </div>
+
               <div className="form-group">
                 <label className="form-label">Short Description</label>
                 <input
